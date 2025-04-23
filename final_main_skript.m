@@ -52,9 +52,8 @@ for u = 1:length(usernames)
 
     
     % Call test function -(all five files, debug, compare_4_or_5,threshold)
-    %match = test_user(file1, file2, file3, file4, file5, debug, 4, match_threshold);
-    randomChoice = randi([4,5]);
-    match = test_user(file1, file2, file3, file4, file5, debug, randomChoice, match_threshold);
+    match = test_user(file1, file2, file3, file4, file5, debug, 4, match_threshold);
+    
 
     
     % Store result in struct under proper username
@@ -93,11 +92,7 @@ for i = 1:length(imposters)
         file5 = fullfile('audio_files', [imposter '_audio'], sprintf('%s_5.m4a', imposter));
 
         % test imposter against user's profile
-        %match = test_user(file1, file2, file3, file4, file5, debug, 4, match_threshold);
-
-        % Presents the 28 test recordings at random between file 4 and 5
-        randomChoice = randi([4,5]);
-        match = test_user(file1, file2, file3, file4, file5, debug, randomChoice, match_threshold);
+        match = test_user(file1, file2, file3, file4, file5, debug, 4, match_threshold);
 
 
         % store result
